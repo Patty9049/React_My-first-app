@@ -3,7 +3,7 @@ import styles from "./List.scss";
 import Hero from "../Hero/Hero";
 import PropTypes from 'prop-types';
 import Column from '../Column/Column';
-import {settings} from '../../data/dataStore';
+import {settings, listData} from '../../data/dataStore';
 // import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator';
 
@@ -24,7 +24,7 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} imgSrc={this.props.headerImgSrc} imgAlt={this.props.headerImgAlt}/>
+        <Hero titleText={this.props.title} imgSrc={this.props.image} imgAlt={this.props.headerImgAlt}/>
         <div className={styles.description}>
           {/* to samo rozwiązanie co dla Hero "{ReactHtmlParser(props.titleText)}" -- nie działa apka_15.5 parsowanie kodu HTML */}
           {this.props.description}
