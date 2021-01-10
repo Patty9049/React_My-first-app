@@ -1,7 +1,6 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import styles from "./Card.scss";
-import {settings} from '../../data/dataStore';
+import styles from './Card.scss';
 
 class Card extends React.Component {
   state = {
