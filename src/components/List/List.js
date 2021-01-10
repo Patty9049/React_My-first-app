@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./List.scss";
-import Hero from "../Hero/Hero";
+import React from 'react';
+import styles from './List.scss';
+import Hero from '../Hero/Hero';
 import PropTypes from 'prop-types';
 import Column from '../Column/Column';
 import {settings, listData} from '../../data/dataStore';
@@ -16,6 +16,7 @@ class List extends React.Component {
     headerImgAlt: PropTypes.string,
     description: PropTypes.node,
     columns: PropTypes.array,
+    image: PropTypes.string,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
@@ -33,9 +34,9 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
     ));
   }
@@ -48,9 +49,9 @@ class List extends React.Component {
           {this.props.description}
         </div>
         <div className={styles.columns}>
-        {this.state.columns.map(({key, ...columnProps}) => (
-          <Column {...listData} key={key} {...columnProps} />
-        ))}
+          {this.state.columns.map(({key, ...columnProps}) => (
+            <Column {...listData} key={key} {...columnProps} />
+          ))}
         </div>
         <div className={styles.creator}>
           <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>

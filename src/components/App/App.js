@@ -1,6 +1,6 @@
-import React from "react";
-import styles from "./App.scss";
-import List from "../List/List";
+import React from 'react';
+import styles from './App.scss';
+import List from '../List/List';
 import {pageContents, listData} from '../../data/dataStore';
 
 

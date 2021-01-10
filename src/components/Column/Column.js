@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
-import styles from "./Column.scss";
-import {settings, listData} from "../../data/dataStore";
-import Creator from "../Creator/Creator";
-import Card from "../Card/Card";
-import Icon from "../Icon/Icon";
+import styles from './Column.scss';
+import {settings, listData} from '../../data/dataStore';
+import Creator from '../Creator/Creator';
+import Card from '../Card/Card';
+import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
   state = {
@@ -14,7 +14,7 @@ class Column extends React.Component {
     cards: PropTypes.array,
     title: PropTypes.node,
     key: PropTypes.number,
-    icon: PropTypes.string
+    icon: PropTypes.string,
   }
   static defaultProps = {
     description: settings.defaultListDescription,
@@ -27,28 +27,26 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
-    console.log('Column', this);
-    console.log('Column.state', this.state.cards);
   }
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.title} 
+        <h3 className={styles.title}>{this.props.title}
           <span>
             <Icon name={this.props.icon} className={styles.icon}/>
           </span>
         </h3>
         <div className={styles.creator}>
-         <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
+          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
         <div className={styles.cards}>
-        {this.state.cards.map(({key, title}) => (
-          <Card {...listData} key={key} title={title}/>
-        ))}
+          {this.state.cards.map(({key, title}) => (
+            <Card {...listData} key={key} title={title}/>
+          ))}
         </div>
       </section>
     );
