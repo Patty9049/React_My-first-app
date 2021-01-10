@@ -4,6 +4,7 @@ import styles from "./Column.scss";
 import {settings, listData} from "../../data/dataStore";
 import Creator from "../Creator/Creator";
 import Card from "../Card/Card";
+import Icon from "../Icon/Icon";
 
 class Column extends React.Component {
   state = {
@@ -13,6 +14,7 @@ class Column extends React.Component {
     cards: PropTypes.array,
     title: PropTypes.node,
     key: PropTypes.number,
+    icon: PropTypes.string
   }
   static defaultProps = {
     description: settings.defaultListDescription,
@@ -35,7 +37,11 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.title}</h3>
+        <h3 className={styles.title}>{this.props.title} 
+          <span>
+            <Icon name={this.props.icon} className={styles.icon}/>
+          </span>
+        </h3>
         <div className={styles.creator}>
          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
