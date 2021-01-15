@@ -15,9 +15,11 @@ class Column extends React.Component {
   }
   static defaultProps = {
     description: settings.defaultListDescription,
+    icon: settings.defaultColumnIcon,
   }
   render() {
     const {title, icon, cards} = this.props;
+    console.log('this.props-column', this.props);
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{title}
