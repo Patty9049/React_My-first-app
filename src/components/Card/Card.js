@@ -3,18 +3,16 @@ import PropTypes from 'prop-types';
 import styles from './Card.scss';
 
 class Card extends React.Component {
-  state = {
-    key: this.props.key,
-    title: this.props.title,
-  }
   static propTypes = {
-    key: PropTypes.number,
+    id: PropTypes.string,
+    columnId: PropTypes.string,
     title: PropTypes.string,
   }
   render() {
+    const {title} = this.props;
     return (
       <section className={styles.component}>
-        <h3>{this.state.title}</h3>
+        <h3>{title}</h3>
       </section>
     );
   }
