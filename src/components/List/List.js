@@ -8,10 +8,11 @@ import Creator from '../Creator/Creator';
 
 class List extends React.Component {
   static propTypes = {
+    id: PropTypes.string,
     title: PropTypes.node.isRequired,
     headerImgSrc: PropTypes.string,
     description: PropTypes.node,
-    columns: PropTypes.object,
+    columns: PropTypes.array,
     image: PropTypes.string,
     addColumn: PropTypes.func,
   }
@@ -21,8 +22,6 @@ class List extends React.Component {
 
   render() {
     const {title, image, description, columns, addColumn} = this.props;
-    console.log('this.props-LIST', this.props);
-
     return (
       <section className={styles.component}>
         <Hero titleText={title} imgSrc={image}/>
@@ -30,7 +29,7 @@ class List extends React.Component {
           {description}
         </div>
         <div className={styles.columns}>
-          {Object.values(columns.columns).map(columnData => (
+          {Object.values(columns).map(columnData => (
             <Column key={columnData.id} {...columnData} />
           ))}
         </div>
