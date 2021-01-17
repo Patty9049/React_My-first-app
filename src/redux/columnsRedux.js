@@ -13,8 +13,8 @@ export const ADD_COLUMN = createActionName('ADD_COLUMN');
 // action creators
 export const createActionAddColumn = payload => ({ payload: { ...payload, id: shortid.generate() }, type: ADD_COLUMN });
 
-// reducer                       NAME CHANGED !!!
-export default function reducer(state = [], action = {}) {
+// reducer                       NAME CHANGED !!! (reducer=> columnsReducer-do nazwy ze store)
+export default function columnsReducer(state = [], action = {}) {
   switch (action.type) {
     case ADD_COLUMN:
       return [...state, action.payload];

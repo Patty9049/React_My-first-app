@@ -8,5 +8,4 @@ const mapStateToProps = state => ({
   columns: state.columns,
   cards: state.cards,
 });
-
 export default connect(mapStateToProps)(App);
