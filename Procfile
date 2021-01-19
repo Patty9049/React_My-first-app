@@ -1,1 +1,1 @@
-web: http-server
+http-server
