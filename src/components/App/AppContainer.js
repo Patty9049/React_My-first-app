@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import App from './App';
+import createAction_changeSearchString from '../../redux/searchStringRedux';
 
 const mapStateToProps = state => ({
   title: state.app.title,
@@ -8,4 +9,11 @@ const mapStateToProps = state => ({
   columns: state.columns,
   cards: state.cards,
 });
-export default connect(mapStateToProps)(App);
+
+const mapDispatchToProps = (dispatch) => ({
+  changeSearchString: () => dispatch(createAction_changeSearchString({
+    payload: {},
+  })),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
