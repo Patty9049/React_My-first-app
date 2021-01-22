@@ -7,6 +7,10 @@ import Card from '../Card/CardContainer';
 import Icon from '../Icon/Icon';
 
 class Column extends React.Component {
+
+
+  
+
   static propTypes = {
     cards: PropTypes.array,
     title: PropTypes.node,
