@@ -10,7 +10,6 @@ const Hero = (props) => (
     <img
       className={styles.image}
       src={props.imgSrc}
-      alt={props.imgAlt}
     />
   </header>
 );
@@ -18,7 +17,6 @@ const Hero = (props) => (
 Hero.propTypes = {
   titleText: PropTypes.node,
   imgSrc: PropTypes.string,
-  imgAlt: PropTypes.string,
 };
 
 export default Hero;

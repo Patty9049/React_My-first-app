@@ -5,7 +5,6 @@ import Container from '../Container/Container';
 import Icon from '../Icon/Icon';
 
 class Header extends React.Component {
-  
   render() {
     return (
       <header className={styles.component}>
@@ -17,6 +16,7 @@ class Header extends React.Component {
             <nav>
               <NavLink exact to='/' activeClassName='active'>Home</NavLink>
               <NavLink exact to='/info' activeClassName='active'>Info</NavLink>
+              <NavLink exact to='/FAQ' activeClassName='active'>FAQ</NavLink>
             </nav>
           </div>
         </Container>
