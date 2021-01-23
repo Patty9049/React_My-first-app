@@ -2,12 +2,17 @@ import React from 'react';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
 import {listData} from '../../data/dataStore';
+import {settings} from '../../data/dataStore';
 
 const FAQ = () => (
   <Container>
     <Hero titleText={listData.title} imgSrc={listData.image} />
-    <h2>FAQ</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h2>{settings.FAQ.title}</h2>
+    <p className={settings.FAQ.classParagraph1}>{settings.FAQ.paragraph1Content}</p>
+    <p className={settings.FAQ.classParagraph2}>{settings.FAQ.paragraph2Content}</p>
+    <p className={settings.FAQ.classParagraph3}>{settings.FAQ.paragraph3Content}</p>
+    <p></p>
+    <p></p>
   </Container>
 );
 
