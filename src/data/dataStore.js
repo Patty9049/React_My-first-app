@@ -100,6 +100,17 @@ const lists = [
     description: 'Interesting things I want to check out!',
     image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
   },
+  {
+    id: 'list-2',
+    title: 'Things to do <sup>on vacation!</sup>',
+    description: 'Beautiful places to discover^^',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },{
+    id: 'list-3',
+    title: 'Things to do <sup>next year!</sup>',
+    description: 'New competences, courses...',
+    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+  },
 ];
 
 const columns = [
@@ -124,10 +135,15 @@ const columns = [
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'South America',
+    icon: 'map',
   },
 ];
+
+export const SearchResultData = {
+  title: 'Search Results',
+  icon: 'book',
+};
 
 const cards = [
   {
